@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bean:beans xmlns:bean="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.springframework.org/schema/security"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    	http://www.springframework.org/schema/beans/spring-beans.xsd
+    	http://www.springframework.org/schema/security
+        https://www.springframework.org/schema/security/spring-security.xsd">
+        
+        
+	<http auto-config="true">
+		<intercept-url pattern="/" access="permitAll" />
+<!--		<intercept-url pattern="/ruta" access="hasAnyAuthority('ADMIN')" />-->
+		
+		<form-login login-page="/login"
+			authentication-failure-url="/error"
+			username-parameter="username"
+			password-parameter="password" />
+		<csrf disabled="true"/>
+		
+		<logout logout-success-url="/"/>
+	</http>
+	
+	<authentication-manager>
+		<authentication-provider>
+			<password-encoder hash="bcrypt" />
+<!--			<user-service>-->
+<!--				<user name="usuario" authorities="ADMIN" password="$2a$10$iwXvVmOoNq1uIqM6jd0AruG1KoeItR/Wo7hgxBfkdjmQsVvjM/O9S" />-->
+<!--			</user-service>-->
+
+			<!-- Data Source de prueba --> 
+			<jdbc-user-service data-source-ref="dataSource" 
+				users-by-username-query="select nombre as username, password, 1 as enabled from usuarios where nombre = ?"
+				authorities-by-username-query="select nombre as username, rol as authority from usuarios where nombre = ?"
+			/>
+		</authentication-provider>
+	</authentication-manager>
+	
+</bean:beans>

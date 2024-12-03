@@ -1,0 +1,187 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("https://media-cdn.tripadvisor.com/media/vr-splice-j/05/f5/14/0b.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: blue;
+    margin-bottom: 0.25rem;
+}
+
+.imagenRelleno {
+	opacity: 0;
+}
+
+.sombra {
+	text-shadow:
+    -0.5px -0.5px 0 #000,
+    0.5px -0.5px 0 #000,
+    -0.5px 0.5px 0 #000,
+    0.5px 0.5px 0 #000;
+}
+
+.sombra-2 {
+	text-shadow:
+    -0.5px -0.5px 0 #003c00,
+    0.5px -0.5px 0 #003c00,
+    -0.5px 0.5px 0 #003c00,
+    0.5px 0.5px 0 #003c00;
+}
+
+/* Estilos para navbar */
+
+.navbar-custom {
+            background-color: #2b2b2b;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+        }
+
+		/*
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #eaeaea !important;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        */
+
+        .navbar-nav .nav-link {
+            color: #b3b3b3 !important;
+            margin-left: 1rem;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffffff !important;
+        }
+
+        .navbar-toggler {
+            border: none;
+            outline: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        /* Popover personalizado */
+        .popover {
+            background-color: #333;
+            color: #fff;
+            border: none;
+        }
+
+        .popover-header {
+            background-color: #444;
+            color: #fff;
+            border-bottom: 1px solid #555;
+        }
+
+        .popover-body {
+            color: #ddd;
+        }
+        
+/* Fin Estilos para navbar */
+
+
+/* Estilos para Listar Propietarios */
+
+	/* Estilos personalizados para la página de listado de propietarios */
+.container {
+    max-width: 90%;
+    padding-top: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo de la sección de filtro */
+/*
+.form-label {
+    font-size: 1.1rem;
+    color: #495057;
+}
+*/
+
+#propietarioNombre, #estadoPropietario {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: all 0.3s;
+}
+
+#propietarioNombre:focus, #estadoPropietario:focus {
+    border-color: #80bdff;
+    box-shadow: 0px 0px 10px rgba(128, 189, 255, 0.5);
+    outline: none;
+}
+
+/* Botón de búsqueda */
+.btn-success {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    background-color: #28a745;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Estilos personalizados para la tabla */
+.table {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.table thead th {
+    background-color: #343a40;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    color: #495057;
+    padding: 1rem;
+}
+
+.table .estado .text-success {
+    font-weight: bold;
+    color: #28a745 !important;
+}
+
+.table .estado .text-danger {
+    font-weight: bold;
+    color: #dc3545 !important;
+}
+
+/* Estilos de sombra */
+.sombra-2 {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+	
+
+/* Fin Estilos para Listar Propietarios */
